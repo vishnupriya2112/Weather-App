@@ -94,7 +94,7 @@
   }
    
   .top-banner form input {
-    width: 100%;
+width: 300px;
     height: 40px;
     border:none;
     outline: none;
@@ -149,4 +149,5 @@
         }
         
     }
+
   }
