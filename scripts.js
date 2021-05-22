@@ -22,7 +22,6 @@ form.addEventListener("submit", e => {
     const inputVal = document.querySelector('.city').value;
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputVal}&appid=${api}&units=metric`;
     fetchdata(url);
-
 });
 
 window.addEventListener('load', () => {
@@ -63,11 +62,12 @@ function fetchdata(base) {
             desc.textContent = `${description}`;
             tempC.textContent = `${temp.toFixed(2)} °C`;
             humid.textContent = `${humidity} %`;
-            press.textContent = `${pressure} mb`;
-            sunriseDOM.textContent = `${sunriseGMT.toLocaleTimeString()}`;
-            sunsetDOM.textContent = `${sunsetGMT.toLocaleTimeString()}`;
+            press.textContent = `${pressure} hpa`;
+            sunriseDOM.textContent = `${sunriseGMT.toLocaleTimeString()} AM`;
+            sunsetDOM.textContent = `${sunsetGMT.toLocaleTimeString()} PM`;
             date.textContent = `${d.toLocaleDateString('en-US')}`;
-            windspeed.textContent = `${speed}`;
+            windspeed.textContent = `${speed} m/s`;
+			document.querySelector('.city').value="";
         });
 }
 
